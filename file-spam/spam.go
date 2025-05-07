@@ -18,15 +18,13 @@ func main(){
 	}
 	f := ""
 	charset := "abcdefghijklmnopqrstuvwxyz"
-	for y := 0; y<*n; y++{
-		for i := 0; i<5; i++{
-			x := string(charset[rand.Intn(26)])
-			f = f+x
-		}
-		f = f + ".txt"
-		os.WriteFile(f, []byte(p2), 0644)
-		f=""
-	}
-
-
+			for y := 0; y<*n; y++{
+				for i := 0; i<5; i++{
+					x := string(charset[rand.Intn(26)])
+					f = f+x
+				}
+				f = f + ".txt"
+				os.WriteFile(f, []byte(p2), 0644)
+				f=""
+			}
 }
